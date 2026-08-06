@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+:root {
+  /* Override Tailwind's runtime color variables for emerald/cyan to match the reference gradient */
+  --color-emerald-50: #f3f6ff;
+  --color-emerald-100: #e6eefc;
+  --color-emerald-200: #cfe0fb;
+  --color-emerald-300: #a8b7ff;
+  --color-emerald-400: #809aff;
+  --color-emerald-500: #6b8cff;
+  --color-emerald-600: #5a6efb;
+  --color-emerald-700: #4858d6;
+  --color-emerald-800: #3b469e;
+  --color-emerald-900: #2e3676;
+
+  --color-cyan-50: #f0feff;
+  --color-cyan-100: #e0fbff;
+  --color-cyan-200: #bff7ff;
+  --color-cyan-300: #9ff1ff;
+  --color-cyan-400: #7ff0ff;
+  --color-cyan-500: #6be7ff;
+  --color-cyan-600: #47d9ff;
+  --color-cyan-700: #2fb0d6;
+  --color-cyan-800: #246f9e;
+  --color-cyan-900: #18496e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Brand utility classes to force the exact reference gradient */
+.bg-brand-gradient {
+  background-image: linear-gradient(90deg,#6b8cff 0%,#6be7ff 100%) !important;
+}
+
+.text-brand-gradient {
+  background-image: linear-gradient(90deg,#6b8cff 0%,#6be7ff 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
