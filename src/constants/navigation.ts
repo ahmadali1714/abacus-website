@@ -9,7 +9,7 @@ export const navItems: NavItem[] = [
 
 export const footerLinks = {
   services: [
-    { label: "Ecommerce & Retail Solutions", href: "/services/ecommerce-retail-solutions" },
+    { label: "Umbraco & Shopify Solutions", href: "/services/ecommerce-retail-solutions" },
     { label: "ERP Solutions", href: "/services/erp-solutions" },
     { label: "Cloud Solutions", href: "/services/cloud-solutions" },
     { label: "Custom Software Development", href: "/services/custom-software-development" },

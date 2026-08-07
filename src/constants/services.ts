@@ -3,9 +3,9 @@ import { Service } from "@/types";
 export const services: Service[] = [
   {
     slug: "ecommerce-retail-solutions",
-    title: "Ecommerce & Retail Solutions",
+    title: "Umbraco & Shopify Solutions",
     shortDescription:
-      "Build powerful online stores and retail platforms that deliver seamless shopping experiences, drive conversions, and scale with your business.",
+      "Combine Umbraco's flexible CMS with Shopify's commerce capabilities to build enterprise-grade storefronts and integrated digital experiences.",
     icon: "ShoppingCart",
     gradient: "from-emerald-500 to-cyan-500",
   },
