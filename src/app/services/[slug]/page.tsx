@@ -4,6 +4,14 @@ import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import { serviceDetails } from "@/constants/serviceDetails";
+
+const imageMap: Record<string, string> = {
+  "ecommerce-retail-solutions": "/service-images/umbraco-shopify.png",
+  "erp-solutions": "/service-images/erp-solutions.png",
+  "cloud-solutions": "/service-images/cloud-solutions.png",
+  "custom-software-development": "/service-images/custom-software-development.png",
+  "ai-machine-learning": "/service-images/ai-machine-learning.png",
+};
 import SectionHeader from "@/components/ui/SectionHeader";
 import Button from "@/components/ui/Button";
 import FAQ from "@/components/ui/FAQ";
@@ -28,51 +36,62 @@ export default function ServiceDetailPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-20 px-6 bg-white overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-20 right-1/3 w-[400px] h-[400px] bg-emerald-50 rounded-full blur-3xl opacity-60" />
-          <div className="absolute bottom-0 left-1/4 w-[300px] h-[300px] bg-cyan-50 rounded-full blur-3xl opacity-60" />
-        </div>
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="flex items-center justify-center gap-2 text-sm text-slate-400 mb-6"
-          >
-            <Link href="/services" className="hover:text-emerald-600 transition-colors">
-              Services
-            </Link>
-            <span>/</span>
-            <span className="text-slate-600">{service.title}</span>
-          </motion.div>
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight mb-6"
-          >
-            {service.title}
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed"
-          >
-            {service.heroSubtitle}
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-8"
-          >
-            <Button href="/contact" size="lg">
-              Discuss Your Project
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-          </motion.div>
+      <section
+        className="relative bg-cover bg-center overflow-hidden"
+        style={{
+          backgroundImage: `url(${imageMap[slug] || '/logo.png'})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        {/* subtle overlay to improve readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-white/40" />
+
+        <div className="relative z-10 flex items-center justify-center text-center px-6 py-24 md:py-32 lg:py-40 min-h-[360px] md:min-h-[420px] lg:min-h-[520px]">
+          <div className="max-w-4xl">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="flex items-center justify-center gap-2 text-sm text-slate-400 mb-6"
+            >
+              <Link href="/services" className="hover:text-emerald-600 transition-colors">
+                Services
+              </Link>
+              <span>/</span>
+              <span className="text-slate-600">{service.title}</span>
+            </motion.div>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight mb-6"
+            >
+              {service.title}
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed"
+            >
+              {service.heroSubtitle}
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="mt-8 flex justify-center"
+            >
+              <Button href="/contact" size="lg">
+                Discuss Your Project
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </motion.div>
+          </div>
         </div>
       </section>
 

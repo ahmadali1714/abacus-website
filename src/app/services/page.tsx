@@ -2,16 +2,16 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowUpRight, ShoppingCart, LayoutDashboard, Cloud, Code2, Brain } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import CTABanner from "@/components/ui/CTABanner";
 import { services } from "@/constants/services";
 
-const iconMap: Record<string, React.ReactNode> = {
-  ShoppingCart: <ShoppingCart className="w-7 h-7" />,
-  LayoutDashboard: <LayoutDashboard className="w-7 h-7" />,
-  Cloud: <Cloud className="w-7 h-7" />,
-  Code2: <Code2 className="w-7 h-7" />,
-  Brain: <Brain className="w-7 h-7" />,
+const imageMap: Record<string, string> = {
+  "ecommerce-retail-solutions": "/service-images/umbraco-shopify.png",
+  "erp-solutions": "/service-images/erp-solutions.png",
+  "cloud-solutions": "/service-images/cloud-solutions.png",
+  "custom-software-development": "/service-images/custom-software-development.png",
+  "ai-machine-learning": "/service-images/ai-machine-learning.png",
 };
 
 export default function ServicesPage() {
@@ -69,20 +69,28 @@ export default function ServicesPage() {
               >
                 <Link
                   href={`/services/${service.slug}`}
-                  className="group block bg-white rounded-2xl border border-slate-100 p-10 h-full transition-all duration-300 hover:shadow-xl hover:shadow-slate-100/50 hover:-translate-y-2 hover:border-slate-200"
+                  className="group block bg-white rounded-2xl border border-slate-100 overflow-hidden h-full transition-all duration-300 hover:shadow-xl hover:shadow-slate-100/50 hover:-translate-y-2 hover:border-slate-200"
                 >
-                  <div
-                    className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center text-white mb-8`}
-                  >
-                    {iconMap[service.icon]}
+                  {/* Image */}
+                  <div className="w-full">
+                    <img
+                      src={imageMap[service.slug] || '/logo.png'}
+                      alt={service.title}
+                      className="w-full h-48 md:h-56 lg:h-64 object-cover rounded-t-xl"
+                      loading="lazy"
+                    />
                   </div>
-                  <h3 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-                    {service.title}
-                    <ArrowUpRight className="w-5 h-5 text-slate-300 group-hover:text-emerald-500 transition-colors" />
-                  </h3>
-                  <p className="text-slate-500 leading-relaxed">{service.shortDescription}</p>
-                  <div className="mt-6 inline-flex items-center gap-2 text-emerald-600 font-semibold text-sm group-hover:gap-3 transition-all">
-                    Learn More <ArrowUpRight className="w-4 h-4" />
+
+                  {/* Content */}
+                  <div className="p-8 flex flex-col h-full">
+                    <h3 className="text-2xl font-bold text-slate-900 mb-4">{service.title}</h3>
+                    <p className="text-slate-500 leading-relaxed flex-grow">{service.shortDescription}</p>
+
+                    <div className="mt-6">
+                      <span className="inline-flex items-center px-4 py-2 rounded-lg bg-emerald-50 text-emerald-600 font-semibold hover:bg-emerald-100 transition-colors">
+                        Learn More
+                      </span>
+                    </div>
                   </div>
                 </Link>
               </motion.div>
