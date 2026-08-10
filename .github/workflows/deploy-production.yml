@@ -16,10 +16,7 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          command_timeout: 15m
+          command_timeout: 30m
+          script_stop: true
           script: |
-            powershell -NoProfile -ExecutionPolicy Bypass -Command "Set-Location 'C:\NextApps\abacus-website'; git fetch --all; git reset --hard origin/main"
-            powershell -NoProfile -ExecutionPolicy Bypass -Command "Set-Location 'C:\NextApps\abacus-website'; npm ci"
-            powershell -NoProfile -ExecutionPolicy Bypass -Command "Set-Location 'C:\NextApps\abacus-website'; npm run build"
-            powershell -NoProfile -ExecutionPolicy Bypass -Command "Restart-Service AbacusNext; Start-Sleep -Seconds 8; Get-Service AbacusNext | Format-List Name,Status"
-            powershell -NoProfile -ExecutionPolicy Bypass -Command "$r = Invoke-WebRequest 'http://127.0.0.1:3000' -UseBasicParsing; if ($r.StatusCode -ne 200) { exit 1 }; Write-Output ('OK ' + $r.RawContentLength)"
+            powershell -NoProfile -ExecutionPolicy Bypass -File C:\NextApps\deploy-abacus.ps1

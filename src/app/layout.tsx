@@ -4,6 +4,7 @@ import "./globals.css";
 import ClientLayout from "@/components/layouts/ClientLayout";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://theabacustech.com/"),
   title: "Abacus | Enterprise Software Solutions",
   description:
     "We build enterprise-grade software solutions that power digital transformation. From cloud infrastructure to AI-driven applications, we partner with businesses to deliver scalable technology.",
