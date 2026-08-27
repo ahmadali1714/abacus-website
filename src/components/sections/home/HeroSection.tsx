@@ -67,18 +67,6 @@ const serviceCards = [
     ],
     rotation: -6,
   },
-  {
-    brand: "Shopify",
-    title: "Shopify Solutions",
-    accent: "#20c997",
-    items: [
-      "Custom Store Development",
-      "ERP Integration",
-      "CRM Solutions",
-      "Automation & Workflows",
-    ],
-    rotation: 6,
-  },
 ];
 
 const floatingNodes = [
@@ -137,8 +125,7 @@ export default function HeroSection() {
               transition={{ duration: 0.55, delay: 0.08 }}
               className="mt-8 text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-slate-950 leading-tight"
             >
-              <span className="text-slate-950">Umbraco</span>{" "}
-              <span className="text-emerald-700">& Shopify</span>
+              <span className="text-slate-950">Umbraco</span>
               <br />ERP & CRM Solutions That Scale With You
             </motion.h1>
 
@@ -149,7 +136,7 @@ export default function HeroSection() {
               transition={{ duration: 0.55, delay: 0.16 }}
               className="mt-6 text-lg leading-8 text-slate-600 max-w-xl"
             >
-              We combine the power of Umbraco CMS and Shopify with smart ERP & CRM solutions to streamline operations, enhance customer relationships, and drive sustainable growth.
+              We combine the power of the Umbraco CMS with smart ERP & CRM solutions to streamline operations, enhance customer relationships, and drive sustainable growth.
             </motion.p>
 
             <motion.div
@@ -252,34 +239,6 @@ export default function HeroSection() {
               </motion.ul>
             </motion.div>
 
-            <motion.div
-              whileHover={{ y: -10, scale: 1.02, rotate: 3 }}
-              initial={{ opacity: 0, y: 28, rotate: 6 }}
-              animate={{ opacity: 1, y: 0, rotate: 6 }}
-              transition={{ duration: 0.6, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              className="group absolute right-8 bottom-16 w-[22rem] rounded-[2rem] border border-slate-200/70 bg-white/95 p-6 shadow-[0_24px_80px_-42px_rgba(15,23,42,0.18)] transition-transform duration-500"
-            >
-              <div className="flex items-center gap-4">
-                <motion.div whileHover={{ scale: 1.08, rotate: -6 }} className="flex h-14 w-14 items-center justify-center rounded-3xl bg-emerald-500 text-white shadow-lg shadow-emerald-500/15">
-                  S
-                </motion.div>
-                <div>
-                  <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-400">Shopify</p>
-                  <h3 className="mt-2 text-xl font-semibold text-slate-950">Shopify Solutions</h3>
-                </div>
-              </div>
-
-              <motion.ul initial="hidden" whileHover="hover" variants={listVariants} className="mt-6 space-y-4">
-                {serviceCards[1].items.map((item) => (
-                  <motion.li key={item} variants={itemVariants} className="flex items-start gap-3 text-sm text-slate-600">
-                    <span className="mt-1 flex h-7 w-7 items-center justify-center rounded-2xl bg-emerald-500 text-white">
-                      <CheckCircle2 className="h-4 w-4" />
-                    </span>
-                    <span>{item}</span>
-                  </motion.li>
-                ))}
-              </motion.ul>
-            </motion.div>
           </div>
         </div>
 
