@@ -11,6 +11,7 @@ const imageMap: Record<string, string> = {
   "erp-solutions": "/service-images/erp-solutions.png",
   "cloud-solutions": "/service-images/cloud-solutions.png",
   "custom-software-development": "/service-images/custom-software-development.png",
+  "crm-solutions": "/service-images/crm-solutions.png",
 };
 
 export default function ServicesPage() {
