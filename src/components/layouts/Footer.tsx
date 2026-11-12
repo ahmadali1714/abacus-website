@@ -10,33 +10,11 @@ const LinkedinIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const FacebookIcon = ({ className }: { className?: string }) => (
-  <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
-    <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.406.593 24 1.325 24H12.82V14.708h-3.2v-3.62h3.2V8.414c0-3.167 1.933-4.894 4.76-4.894 1.353 0 2.517.1 2.856.145v3.31h-1.957c-1.535 0-1.832.73-1.832 1.8v2.36h3.663l-.478 3.62h-3.185V24h6.244C23.406 24 24 23.406 24 22.676V1.325C24 .593 23.406 0 22.675 0z" />
-  </svg>
-);
-
-const InstagramIcon = ({ className }: { className?: string }) => (
-  <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
-    <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3h10zm-5 3.5a4.5 4.5 0 100 9 4.5 4.5 0 000-9zm0 2a2.5 2.5 0 110 5 2.5 2.5 0 010-5zm3.75-2.75a.75.75 0 110 1.5.75.75 0 010-1.5z" />
-  </svg>
-);
-
 const socialLinks = [
   {
     href: "https://www.linkedin.com/company/the-abacus-tech/",
     label: "LinkedIn",
     Icon: LinkedinIcon,
-  },
-  {
-    href: "#",
-    label: "Facebook",
-    Icon: FacebookIcon,
-  },
-  {
-    href: "https://www.instagram.com/theabacus.tech0/",
-    label: "Instagram",
-    Icon: InstagramIcon,
   },
 ];
 

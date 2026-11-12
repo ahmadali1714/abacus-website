@@ -20,12 +20,17 @@ const clientLogos = [
     url: "https://displays2go.com.au/",
   },
   {
+    src: "/client-logos/hso.svg",
+    alt: "HSO",
+    url: "https://www.hso.com/",
+  },
+  {
     src: "/client-logos/swirl-mark.png",
     alt: "SlipperSpot",
     url: "https://slipperspot.com/",
   },
   {
-    src: "/client-logos/new-transparent-logo.png",
+    src: "/client-logos/data-intuitions.png",
     alt: "Data Intuitions",
     url: "https://www.dataintuitions.com/",
   },
@@ -263,7 +268,7 @@ export default function HeroSection() {
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-10 max-w-[140px] object-contain filter grayscale brightness-0"
+                  className="h-10 max-w-[140px] object-contain"
                 />
               </a>
             ))}

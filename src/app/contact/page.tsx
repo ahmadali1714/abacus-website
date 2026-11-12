@@ -252,7 +252,9 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-sm font-medium text-slate-900">Email</p>
-                      <p className="text-sm text-slate-500">theabacus.tech0@gmail.com</p>
+                      <a href="mailto:info@abacustech.com" className="text-sm text-slate-500 hover:text-emerald-600 transition-colors">
+                        info@abacustech.com
+                      </a>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -261,7 +263,9 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-sm font-medium text-slate-900">Phone</p>
-                      <p className="text-sm text-slate-500">+1 (555) 123-4567</p>
+                      <a href="tel:+17868859115" className="text-sm text-slate-500 hover:text-emerald-600 transition-colors">
+                        +1 (786) 885-9115
+                      </a>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -271,9 +275,9 @@ export default function ContactPage() {
                     <div>
                       <p className="text-sm font-medium text-slate-900">Office</p>
                       <p className="text-sm text-slate-500">
-                        123 Innovation Drive
+                        30 N Gould St Ste 66429
                         <br />
-                        San Francisco, CA 94105
+                        Sheridan, WY 82801
                       </p>
                     </div>
                   </div>
@@ -292,15 +296,18 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Map Placeholder */}
+      {/* Map */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-slate-100 rounded-2xl h-80 flex items-center justify-center border border-slate-200">
-            <div className="text-center">
-              <MapPin className="w-10 h-10 text-slate-300 mx-auto mb-3" />
-              <p className="text-slate-400 font-medium">San Francisco, California</p>
-              <p className="text-slate-300 text-sm">123 Innovation Drive, CA 94105</p>
-            </div>
+          <div className="rounded-2xl h-80 overflow-hidden border border-slate-200 bg-slate-100">
+            <iframe
+              title="Abacus office location: 30 N Gould St Ste 66429, Sheridan, WY 82801"
+              src="https://maps.google.com/maps?q=30%20N%20Gould%20St%20Ste%2066429%2C%20Sheridan%2C%20WY%2082801&z=15&output=embed"
+              className="w-full h-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
           </div>
         </div>
       </section>
@@ -337,7 +344,7 @@ export default function ContactPage() {
               Schedule a free consultation to discuss your project requirements and discover
               how we can help you achieve your business goals.
             </p>
-            <Button href="mailto:theabacus.tech0@gmail.com" variant="primary" size="lg">
+            <Button href="mailto:info@abacustech.com" variant="primary" size="lg">
               Schedule a Call
             </Button>
           </div>

@@ -34,11 +34,11 @@ export const services: Service[] = [
     gradient: "from-orange-500 to-rose-500",
   },
   {
-    slug: "ai-machine-learning",
-    title: "AI / Machine Learning",
+    slug: "crm-solutions",
+    title: "CRM Solutions",
     shortDescription:
-      "Harness the power of artificial intelligence and machine learning to automate processes, gain insights, and create intelligent applications.",
-    icon: "Brain",
+      "Build stronger customer relationships with CRM systems that unify sales, marketing, and support data into a single view of every customer.",
+    icon: "Users",
     gradient: "from-cyan-500 to-teal-500",
   },
 ];

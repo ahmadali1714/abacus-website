@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Search, Calendar, Clock, ArrowUpRight } from "lucide-react";
 import CTABanner from "@/components/ui/CTABanner";
-import { blogEntries, getAllCategories } from "@/lib/blogData";
+import { blogEntries, getAllCategories, getBlogImage } from "@/lib/blogData";
 
 export default function BlogsPage() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -174,8 +174,13 @@ export default function BlogsPage() {
                     href={`/blogs/${blog.slug}`}
                     className="group block bg-white rounded-2xl border border-slate-100 overflow-hidden h-full transition-all duration-300 hover:shadow-lg hover:shadow-slate-100/50 hover:-translate-y-1"
                   >
-                    <div className="h-44 bg-gradient-to-br from-slate-100 to-slate-50 flex items-center justify-center">
-                      <span className="text-2xl font-bold text-slate-200">{blog.category}</span>
+                    <div className="h-44 overflow-hidden bg-slate-100">
+                      <img
+                        src={getBlogImage(blog.category)}
+                        alt={blog.title}
+                        loading="lazy"
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
                     </div>
                     <div className="p-6">
                       <div className="flex items-center gap-3 text-sm text-slate-400 mb-3">

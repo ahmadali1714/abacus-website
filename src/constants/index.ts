@@ -12,11 +12,11 @@ export const statistics: Statistic[] = [
 
 export const testimonials: Testimonial[] = [
   {
-    name: "Sarah Mitchell",
-    role: "CTO",
-    company: "RetailMax Inc.",
-    content: "NexaVion transformed our legacy systems into a modern, cloud-native platform. Their expertise in enterprise architecture and attention to detail exceeded our expectations. The result was a 40% improvement in operational efficiency.",
-    avatar: "SM",
+    name: "Phil Hine",
+    role: "Director",
+    company: "Displays2Go",
+    content: "Abacus delivered a fast, flexible Umbraco website for Displays2Go and connected it to a CRM that brings our sales and customer information together in one place. They took the time to understand how our team works, made the move seamless, and now updating our content and following up with customers is easier than ever.",
+    avatar: "PH",
   },
   {
     name: "James Rodriguez",

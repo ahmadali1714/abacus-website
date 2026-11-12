@@ -262,3 +262,16 @@ export function getRelatedBlogs(currentSlug: string, category: string): BlogEntr
     .filter((b) => b.slug !== currentSlug && b.category === category)
     .slice(0, 3);
 }
+
+const blogCategoryImages: Record<string, string> = {
+  "Digital Transformation": "/service-images/cloud-solutions.png",
+  "AI / ML": "/service-images/ai-machine-learning.png",
+  Cloud: "/service-images/cloud-solutions.png",
+  ERP: "/service-images/erp-solutions.png",
+  Ecommerce: "/service-images/umbraco-shopify.png",
+  "Software Development": "/service-images/custom-software-development.png",
+};
+
+export function getBlogImage(category: string): string {
+  return blogCategoryImages[category] ?? "/service-images/custom-software-development.png";
+}

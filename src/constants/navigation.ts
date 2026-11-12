@@ -13,7 +13,7 @@ export const footerLinks = {
     { label: "ERP Solutions", href: "/services/erp-solutions" },
     { label: "Cloud Solutions", href: "/services/cloud-solutions" },
     { label: "Custom Software Development", href: "/services/custom-software-development" },
-    { label: "AI / Machine Learning", href: "/services/ai-machine-learning" },
+    { label: "CRM Solutions", href: "/services/crm-solutions" },
   ],
   company: [
     { label: "About Us", href: "/about" },
